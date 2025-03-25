@@ -1,0 +1,129 @@
+/* App.css */
+
+/* Sidebar styles remain unchanged */
+.sidebar {
+  width: 60px;
+  height: 100vh;
+  background: #2c3e50;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 1000;
+}
+
+/* Content wrapper for all routed components */
+.content-wrapper {
+  height: 100vh;         /* Matches viewport height */
+  overflow-y: auto;      /* Adds scrollbar when content overflows */
+}
+
+/* Apply margin only when sidebar is present */
+.content-wrapper.with-sidebar {
+  margin-left: 60px;     /* Shifts content right to accommodate sidebar */
+}
+
+/* Updated #map styles - remove margin-left */
+#map {
+  height: 100vh;         /* Keep height, no margin-left */
+}
+
+/* Updated .content-container styles - remove margin-left */
+.content-container {
+  padding: 20px;         /* Keep padding, no margin-left */
+}
+
+/* Other existing styles remain unchanged */
+.nav-link {
+  color: #ecf0f1;
+  font-size: 24px;
+  margin: 15px 0;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #3498db;
+  transform: scale(1.1);
+}
+
+.button-link {
+  text-decoration: none;
+  background-color: #1a4b8c;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.button-link.register-btn {
+  font-size: 12px;
+}
+
+.logout-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 50px;
+  margin: 10px 0;
+}
+
+.logout-btn:hover, .button-link:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.nav-link.active {
+  color: #3498db;
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 20px;
+  background-color: #3498db;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Added for permission error message */
+.permission-error {
+  padding: 20px;
+  color: red;
+  font-size: 18px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
